@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="title">
+                <h2>Review</h2>
+                <div class="underline"></div>
+            </div>
+
+            <article class="review">
+                <div class="img-container">
+                    <img src="person1.jpg" id="person-img" alt="" />
+                </div>
+                <h4 id="author">Steve Kerr</h4>
+                <p id="job">Backend Developer</p>
+                <p id="info">
+                   A sensational store for training gear, clothes, footwear, and more!.
+                </p>
+                <div class="button-container">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                  </div>
+                  <!-- random button -->
+                  <button class="random-btn">surprise me</button>
+                  <button class="slideshow">Slideshow</button>
+                  <button class="theme-toggle">dark Mode</button>
+                  <button class="add-review-btn">Add a review</button>
+            </article>
+            <div class="timer">
+                <h4></h4>
+            </div>
+        </section>
+        <p id="alert">Clicking the slideshow will result in a automatic loop that displays all reviews for 5 seconds each. The loop will run until you stop it. To stop the loop, press any other button aside from the slideshow button or relaod the page</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
