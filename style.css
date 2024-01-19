@@ -316,10 +316,10 @@ main {
   color: var(--clr-primary-1);
 }
 
-
+/* Code for dark mode transition */
 body.dark-mode {
-  background-color: darkslategrey; 
-  color: #ffffff; 
+  background-color: darkslategrey; /* set your dark mode background color */
+  color: #ffffff; /* set your dark mode text color */
 }
 .dark-mode #alert{
   color: #fff;
