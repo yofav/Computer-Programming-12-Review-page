@@ -1,39 +1,39 @@
-// all of the possible reviews
+// reviews
 const reviews = [
     {
         id: 1,
         name: "Stephen Curry",
-        job: "Chef",
-        img: "https://t.ly/-aydj",
-        text: "Great store, helps me cook!  "
+        job: "Cook",
+        img: "https://phantom-marca.unidadeditorial.es/1c7e80b512d7b2c326e7a684e3d976af/resize/828/f/jpg/assets/multimedia/imagenes/2023/07/13/16892703264593.png",
+        text: "Great store, helps me cook!"
     },
     {
         id: 2,
         name: "Klay Thompson",
-        job: "Trainer",
-        img: "https://t.ly/bDkHK",
-        text: "Great store, helps me train my clients well!"
+        job: " Trainer",
+        img: "https://sportshub.cbsistatic.com/i/r/2023/12/21/13b65f1d-0914-4944-af32-0d9eb8b6cf34/thumbnail/1200x675/bb57dee2cfc263b6f77db5f64af69722/klay-thompson-still-2023.png",
+        text: "100% recommend this store, great gear for my clients"
     },
     {
         id: 3,
         name: "Draymond Green",
-        job: "ESPN Analyst",
-        img: "https://t.ly/O0rbc",
-        text: "High quality products, high quality clients!"
+        job: "Pro Ref",
+        img: "https://media.cnn.com/api/v1/images/stellar/prod/240116110354-01-golden-state-warriors-memphis-grizzlies-011524.jpg?c=16x9&q=h_833,w_1480,c_fill",
+        text: "High quality training gear!"
     },
     {
         id: 4,
         name: "Quin Cook",
-        job: "Retired NBA pPlayer",
-        img: "https://t.ly/ERixv",
-        text: "The stores products, has helped me train my sun into becoming a better basketball player!" 
+        job: "Chef",
+        img: "https://upload.wikimedia.org/wikipedia/commons/5/59/Quinn_Cook_2019_NBA_Playoffs_%28cropped%29.jpg",
+        text: "I feel good wearing these products, using them in my everyday life" 
     },
     {
         id: 5,
         name: "Jonathon Kuminga",
-        job: "Police Officer",
-        img: "https://t.ly/h1Y2_",
-        text: "For athletes, this store is amazing for gear!"
+        job: "Professiona Basketball Player",
+        img: "https://cdn.nba.com/headshots/nba/latest/1040x760/1630228.png",
+        text: "Wearing their products on the court, makes me play better!"
     },
 ];
 
@@ -62,7 +62,7 @@ function showPerson(){
     job.textContent = item.job;
     info.textContent = item.text;
 }
-// Function to start Slideshow
+
 function startSlideshow() {
     slideshowInterval = setInterval(() => {
       currentItem++;
@@ -71,20 +71,20 @@ function startSlideshow() {
       }
       ss = true;
       showPerson();
-    }, 5000); // each review is shown for 5 seconds since 5000ms = 5s
+    }, 5000); 
 }
-//Function to stop slideshow
+
 function stopSlideshow() {
     clearInterval(slideshowInterval);
 }
 
 nextBtn.addEventListener("click", function () {
-    if (ss == true){ // If slideshow is on, we will stop it so user can take control
+    if (ss == true){ // 
         stopSlideshow();
     }
     currentItem++;
     if (currentItem > reviews.length - 1) {
-        currentItem = 0; // if we reach last review, we will start over again from the start
+        currentItem = 0; 
     }
     showPerson();
 });
@@ -104,7 +104,7 @@ randomBtn.addEventListener("click", function () {
     if (ss == true){
         stopSlideshow();
     }
-    currentItem = Math.floor(Math.random() * reviews.length); // enables random reviewa
+    currentItem = Math.floor(Math.random() * reviews.length); 
     showPerson();
 });
 
@@ -127,7 +127,7 @@ themeToggle.addEventListener('click', function () {
 });
 
 
-// add own reviews
+
 const addReviewBtn = document.querySelector('.add-review-btn');
 
 addReviewBtn.addEventListener('click', function() {
@@ -140,11 +140,12 @@ addReviewBtn.addEventListener('click', function() {
             id: reviews.length + 1,
             name: userName,
             job: userJob,
-            img: 'https://t.ly/-aydj',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Quinn_Cook_2019_NBA_Playoffs_%28cropped%29.jpg',
             text: userText
         };
 
         reviews.push(newUserReview); 
+        
         currentItem = reviews.length - 1; 
         showPerson(); 
     } else {
